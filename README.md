@@ -25,10 +25,9 @@ You can download the authors' voice samples from the link below.
 [YourTTS Audio Sample](https://github.com/Edresson/YourTTS).
 
 
-
-
 ## Acknowledgment
-sss
+This work was partially supported by the Artificial Intelligence Industry Cluster Agency(AICA) grant funded by the Korea government(MSIT) (K-Digital Challenge : AI Startup Foundation Competition, 2023), and by the research fund from Chosun University, 2023.
+
 
 ## License
 These audio samples are MIT-licensed. The license applies to our pre-trained models as well.
