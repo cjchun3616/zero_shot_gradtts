@@ -1,10 +1,10 @@
 # Zero-Shot Multi Speaker GradTTS
 
-This repository provides a Audio Sample of Zero-Shot Grad-TTS.
+This repository provides audio samples of Zero-Shot Grad-TTS.
 
 ### Audio Samples
 
-The audio samples for Zero-Shot Grad-TTS can ben found in [link](https://www.amclab.kr/demo/zero_shot_gradtts/).
+The audio samples for Zero-Shot Grad-TTS can be found in [link](https://www.amclab.kr/demo/zero_shot_gradtts/).
 
 ### Comparison Dataset
 For the comparison of synthesis performance for the Seen speaker, we randomly selected speakers from the LibriTTS dataset used in the learning and performed speech synthesis.
