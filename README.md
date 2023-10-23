@@ -30,4 +30,4 @@ This work was partially supported by the Artificial Intelligence Industry Cluste
 
 
 ## License
-These audio samples are MIT-licensed. The license applies to our pre-trained models as well.
+These audio samples are MIT-licensed. 
