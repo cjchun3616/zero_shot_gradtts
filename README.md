@@ -31,4 +31,4 @@ You can download the authors' voice samples from the link below.
 sss
 
 ## License
-This code is MIT-licensed. The license applies to our pre-trained models as well.
+These audio samples are MIT-licensed. The license applies to our pre-trained models as well.
