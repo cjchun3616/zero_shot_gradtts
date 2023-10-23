@@ -1,0 +1,44 @@
+body {
+    height: 100%;
+    overflow-x: hidden;
+    background-color: lightgray;
+}
+img {
+    width: 800px;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+ @media (max-width: 950px) {
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.out_content{
+    display: flex;
+    justify-content:center;
+    align-items : center;
+}
+
+.main {
+    width: 60%;
+    height:100%;
+    background-color: white;
+    padding: 10px 40px;
+}
+
+.em {
+    font-size: medium;
+    font-weight: bold
+}
+.seen_speaker {
+    margin-top: 50px;
+}
+.unseen_speaker {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Audio Demo</title>
+</head>
+
+<body>
+    <div class=out_content>
+        <div class="main">
+            <h1>Zero-Shot Multi Speaker Speech Synthesis</h1>
+            <hr>
+            <h2>Abstract</h2>
+            <p>Speech synthesis refers to a technology that converts text into speech waveforms. With the de-velopment of deep learning, neural network-based speech synthesis technology is being re-searched in various fields, and the quality of synthesized speech has also been greatly improved. In particular, Grad-TTS, a speech synthesis model proposed based on the Denoising Diffusion Probabilistic Model (DDPM), which shows high performance in various domains, generates high quality speech and supports multi-speaker speech synthesis. However, there is a disadvantage that speech synthesis for unseen speaker is not possible. Therefore, in this paper, we propose an effective Zero-Shot Multi-Speaker speech synthesis model by improving the Grad-TTS structure. The proposed method allows receiving speaker information from speech references using a pre-trained speaker recognition model. Additionally, by converting speaker information via information perturbation, the model can learn various speaker information other than the speakers held in the dataset. To evaluate the performance of the proposed method, we measured the objective performance indicators Speaker Encoder Cosine Similarity (SECS) and Mean Opin-ion Score (MOS). In order to evaluate the synthesis performance for both seen speaker and un-seen speaker scenarios, a comparison was conducted with Grad-TTS, SC-GlowTTS, and YourTTS. The results demonstrated not only excellent speech synthesis performance for seen speakers but also performance similar to the Zero-Shot Multi-Speaker speech synthesis model.</p>
+            
+            <h2>Overall structure of proposed Zero-Shot Grad-TTS</h2>
+            <img src="pic/perturbation_tts_fig1.png" alt="fig1">
+
+
+            <p class="em">The audio sample below is a sample synthesized using the model proposed in this paper.</p>
+
+            <div class="seen_speaker">
+                <h2>Speech synthesis sample for Seen speaker - LibriTTS</h2>
+                <hr/>
+                <h3>Ground Truths</h3>
+                <div class="audio-js-box wp-css">
+                    <audio controls>
+                      <source src="audio/GT_libri/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/GT_libri/2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/GT_libri/3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/GT_libri/4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <h3>Grad-TTS</h3>
+                <div class="audio-js-box wp-css">
+                    <audio controls>
+                      <source src="audio/gradtts/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/gradtts/2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/gradtts/3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/gradtts/4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <h3>Ours</h3>
+                <div class="audio-js-box wp-css">
+                    <audio controls>
+                      <source src="audio/ours_libri/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/ours_libri/2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/ours_libri/3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/ours_libri/4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+
+
+            <div class="unseen_speaker">
+                <h2>Speech synthesis sample for Unseen speaker - VCTK</h2>
+                <hr/>
+                <h3>Ground Truths</h3>
+                <div class="audio-js-box wp-css">
+                    <audio controls>
+                      <source src="audio/GT_vctk/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/GT_vctk/2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/GT_vctk/3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/GT_vctk/4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <h3>SC-GlowTTS</h3>
+                <div class="audio-js-box wp-css">
+                    <audio controls>
+                      <source src="audio/sc-glowtts/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/sc-glowtts/2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/sc-glowtts/3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/sc-glowtts/4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <h3>YourTTS</h3>
+                <div class="audio-js-box wp-css">
+                    <audio controls>
+                      <source src="audio/yourtts/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/yourtts/2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/yourtts/3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/yourtts/4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <h3>Ours</h3>
+                <div class="audio-js-box wp-css">
+                    <audio controls>
+                      <source src="audio/ours_vctk/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/ours_vctk/2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/ours_vctk/3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                      <source src="audio/ours_vctk/4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+
+            <div class="source">
+                <h2>Source of voice samples used for comparison</h2>
+                <hr>
+                <p>The voice samples of SC-glowTTS and YourTTS used for model comparison were the samples provided in the link below.</p>
+                <p><a href="https://github.com/Edresson/YourTTS">SC-GlowTTS Sample</a></p>
+                <p><a href="https://github.com/Edresson/SC-GlowTTS">YourTTS Sample</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
